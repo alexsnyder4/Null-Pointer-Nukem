@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NullPointers : MonoBehaviour
+public class Swarms : Enemies
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,9 @@ public class NullPointers : MonoBehaviour
     void Update()
     {
         
+    }
+    public override void Destroy()
+    {
+        base.Destroy();
     }
 }

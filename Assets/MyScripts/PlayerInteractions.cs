@@ -7,7 +7,6 @@ public class PlayerInteractions : MonoBehaviour
 {
     public PlayerUI ui;
     private PlayerScoring playerscoring;
-    private GameObject gameObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,30 +19,49 @@ public class PlayerInteractions : MonoBehaviour
     void Update()
     {
         ui.UpdateUI();
-        if(Input.GetKeyDown(KeyCode.P))//cookbook
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Null Pointer")) 
+        {
+            playerscoring.MinusKPoints();
+            NullPointers nullPointer = collision.gameObject.GetComponent<NullPointers>();
+            if (nullPointer != null)
+            {
+                nullPointer.Destroy();
+            }
+        }
+        if(collision.gameObject.CompareTag("Swarm")) 
+        {
+            //reduce by 10 per second until collides with hero
+        }
+        if(collision.gameObject.CompareTag("Pirate")) 
+        {
+            //freeze player
+        }
+        if(collision.gameObject.CompareTag("Cookbook")) 
         {
             playerscoring.AddKPoints(1);
         }
-        if(Input.GetKeyDown(KeyCode.L))//PHd
+        if(collision.gameObject.CompareTag("PHD")) 
         {
             playerscoring.AddKPoints(25);
         }
-        if(Input.GetKeyDown(KeyCode.M))//brownie
+        if(collision.gameObject.CompareTag("Brownie")) 
         {
             playerscoring.AddBrownie();
         }
-        if(Input.GetKeyDown(KeyCode.O))//NullPointer
+        if(collision.gameObject.CompareTag("Ohl")) 
         {
-            playerscoring.MinusKPoints();
+            //10 brownies knowledge bomb
         }
-        if(Input.GetKeyDown(KeyCode.K))//Swarm
+        if(collision.gameObject.CompareTag("Sandro")) 
         {
-            playerscoring.MinusKPoints();
+            //10 brownies british invasion
         }
-        if(Input.GetKeyDown(KeyCode.N))//brownie
+        if(collision.gameObject.CompareTag("Bilitski")) 
         {
-            playerscoring.AddBrownie();
+            //10 brownies American Algorithmic Amplifier.
         }
-        
     }
 }

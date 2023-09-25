@@ -7,6 +7,7 @@ public class PlayerScoring : MonoBehaviour
     public int brownies = 0;
     public bool maxBrownies = false;
     public int currKPoints = 20;
+    public int highestNumKPoints = 20;
     public int maxKPoints = 1000000;
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,21 @@ public class PlayerScoring : MonoBehaviour
     public void ResetBrownies()
     {
         brownies = 0;
+    }
+    public void UpdateHighestKPoints()
+    {
+        if (currKPoints > highestNumKPoints)
+            highestNumKPoints = currKPoints;
+    }
+    public void CheckForLoss()
+    {
+        if (currKPoints < (.25 * currKPoints))
+        {
+            Debug.Log("Game Over");
+            //remove player controls
+            //display new text mesh canvas saying Game Over
+            //possibly add restart button?
+        }
     }
 
 }

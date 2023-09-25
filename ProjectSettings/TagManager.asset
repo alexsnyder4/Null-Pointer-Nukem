@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Null Pointer
+  - Swarm
+  - Pirate
   layers:
   - Default
   - TransparentFX
