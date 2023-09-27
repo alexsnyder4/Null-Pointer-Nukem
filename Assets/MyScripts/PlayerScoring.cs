@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScoring : MonoBehaviour
-{
+{   
+    public bool isPoisoned = false;
     public int brownies = 0;
     public bool maxBrownies = false;
     public int currKPoints = 20;
     public int highestNumKPoints = 20;
     public int maxKPoints = 1000000;
+    public float lastReductionTime;
+    public PlayerInteractions playerinteractions;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerinteractions = GetComponent<PlayerInteractions>();
     }
 
     // Update is called once per frame
@@ -60,5 +63,23 @@ public class PlayerScoring : MonoBehaviour
             //possibly add restart button?
         }
     }
+    public void DecayPoints()
+    {
+        
+        
+    }
 
+    private IEnumerator SwarmCoroutine()
+    {   
+        while(isPoisoned)
+        {
+            currKPoints = (int)(currKPoints * .9);
+            yield return new WaitForSeconds(1f);
+        }
+    }
+    public void StartSwarmDmg()
+    {
+        isPoisoned = true;
+        StartCoroutine(SwarmCoroutine());
+    }
 }

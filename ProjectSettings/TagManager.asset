@@ -7,6 +7,12 @@ TagManager:
   - Null Pointer
   - Swarm
   - Pirate
+  - Pendant
+  - Cookbook
+  - Brownie
+  - Ohl
+  - Sandro
+  - Bilitski
   layers:
   - Default
   - TransparentFX
@@ -14,10 +20,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemies
+  - Heroes
+  - Items
   - 
   - 
   - 
