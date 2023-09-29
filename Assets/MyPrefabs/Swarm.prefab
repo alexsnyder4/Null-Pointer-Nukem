@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9ee5ea338bdc14bb122c6101ab5091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -5
 --- !u!212 &5049259149935313302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -166,7 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9ee5ea338bdc14bb122c6101ab5091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -5
 --- !u!212 &2904759475293636822
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -286,7 +284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9ee5ea338bdc14bb122c6101ab5091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -5
 --- !u!212 &694716968363254327
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -410,10 +407,10 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 896
+    m_Bits: 2944
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -488,7 +485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9ee5ea338bdc14bb122c6101ab5091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -5
 --- !u!50 &-1336173110153628667
 Rigidbody2D:
   serializedVersion: 4

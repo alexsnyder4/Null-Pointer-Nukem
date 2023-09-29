@@ -98,7 +98,7 @@ CapsuleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 896
@@ -118,8 +118,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.039916873}
-  m_Size: {x: 1.6113319, y: 2.0104988}
+  m_Offset: {x: 0, y: 0.0029152238}
+  m_Size: {x: 1.6113319, y: 1.8378283}
   m_Direction: 0
 --- !u!114 &-7258342164679006316
 MonoBehaviour:
@@ -133,3 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 687c89cdc60a3db4eb1de6c36ca2c097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  movementSpeed: 5

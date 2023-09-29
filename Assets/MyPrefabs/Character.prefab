@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5716003750680468203}
   - component: {fileID: 8001135919208936079}
   - component: {fileID: 6741513703805626598}
+  - component: {fileID: 2619238120868328736}
   m_Layer: 6
   m_Name: Character
   m_TagString: Player
@@ -33,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 1437826975614221321}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.53, y: -0.49, z: -0.038356744}
+  m_LocalPosition: {x: 7.3, y: -0.9, z: -0.038356744}
   m_LocalScale: {x: 15, y: 15.384615, z: 9.041265}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -123,8 +124,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00907645, y: -0.04942964}
-  m_Size: {x: 0.2503664, y: 0.28763}
+  m_Offset: {x: 0.009076453, y: -0.034703124}
+  m_Size: {x: 0.25036657, y: 0.25817722}
   m_Direction: 0
 --- !u!50 &6683366574320400985
 Rigidbody2D:
@@ -165,7 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cf1984734b5bb4882c151e8b582b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 12
+  isFrozen: 0
 --- !u!114 &7295132270456647210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82af738d01d298942a17a165b56e1129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui: {fileID: 0}
+  isImmune: 0
 --- !u!114 &5716003750680468203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,13 +194,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPoisoned: 0
-  brownies: 0
+  brownies: 10
   maxBrownies: 0
   currKPoints: 20
+  minKPoints: 5
   highestNumKPoints: 20
   maxKPoints: 1000000
   lastReductionTime: 0
-  playerinteractions: {fileID: 0}
+  playerinteractions: {fileID: 7295132270456647210}
 --- !u!114 &8001135919208936079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kScore: {fileID: 0}
   bScore: {fileID: 0}
+  canvasImage: {fileID: 0}
+  chat: {fileID: 0}
 --- !u!95 &6741513703805626598
 Animator:
   serializedVersion: 5
@@ -234,3 +239,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2619238120868328736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437826975614221321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c539d95d09664fa28d1cb74d6233d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numBrownies: 0
+  numPendant: 0
+  numCookbook: 0

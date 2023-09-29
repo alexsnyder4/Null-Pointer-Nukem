@@ -98,6 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655b0c3c7be2be6408968f4c63b6da9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numBrownies: 0
+  numPendant: 0
+  numCookbook: 0
 --- !u!60 &5484424002281052325
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -113,7 +116,7 @@ PolygonCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

@@ -19,4 +19,8 @@ public class Bilitski : Heroes
     {
         base.Destroy();
     }
+    public int Amplify(int points)
+    {
+        return points *= 2;
+    }
 }

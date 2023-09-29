@@ -8,6 +8,7 @@ public class PlayerScoring : MonoBehaviour
     public int brownies = 0;
     public bool maxBrownies = false;
     public int currKPoints = 20;
+    public int minKPoints = 5;
     public int highestNumKPoints = 20;
     public int maxKPoints = 1000000;
     public float lastReductionTime;
@@ -21,7 +22,11 @@ public class PlayerScoring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateHighestKPoints();
+        if(brownies < 10)
+            maxBrownies = false;
         
+        CheckForLoss();
     }
     public void AddKPoints(int value)
     {
@@ -51,16 +56,18 @@ public class PlayerScoring : MonoBehaviour
     public void UpdateHighestKPoints()
     {
         if (currKPoints > highestNumKPoints)
+        {
             highestNumKPoints = currKPoints;
+
+            minKPoints = (int)(.25 * highestNumKPoints);
+
+        }
     }
     public void CheckForLoss()
     {
-        if (currKPoints < (.25 * currKPoints))
+        if (currKPoints < minKPoints)
         {
-            Debug.Log("Game Over");
-            //remove player controls
-            //display new text mesh canvas saying Game Over
-            //possibly add restart button?
+            Debug.Log("Loss");
         }
     }
     public void DecayPoints()

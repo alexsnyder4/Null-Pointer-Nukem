@@ -101,7 +101,7 @@ PolygonCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -218,3 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ffcc2b0be45cf41a25af215d4f24f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numBrownies: 0
+  numPendant: 0
+  numCookbook: 0
